@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 28px;
+}
+p {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.todos {
+  color: red;
+  font-weight: 600;
+}
+
+ul {
+  font-weight: 200;
+  list-style-type: circle;
+}
+
+li:before {
+  content: "\f1b9"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.8em; /* same as padding-left set on li */
+}
+
+span {
+  color: rgb(138, 138, 138);
+  font-weight: 300;
+}
+
+/* Valeria Images */
+.img1 {
+  background-image: url("img/mf1.jpg");
+}
+
+.img2 {
+  background-image: url("img/mf6.jpg");
+}
+
+.img3 {
+  background-image: url("img/mf8.jpg");
+}
+
+.img4 {
+  background-image: url("img/mf4.jpg");
+}
+
+.img5 {
+  background-image: url("img/mf5.jpg");
+}
+
+.img6 {
+  background-image: url("img/mf6.jpg");
+}
+
+/* Map images */
+.map-img1 {
+  background-image: url("img/dag1.jpg");
+}
+
+/* Video Parallax */
+.video-parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.video-parallax video {
+  min-width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -999;
+}
+
+.myVideo {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-parallax h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  font-family: "Montserrat", sans-serif;
+  max-width: 60rem;
+}
+
+.video-parallax h1:last-child {
+  margin-bottom: 20vh;
+}
+
+/* Img Parallax */
+
+.img-parallax {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-parallax {
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.img-parallax h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  font-family: "Montserrat", sans-serif;
+  max-width: 60rem;
+}
+footer {
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+  background-color: white;
+  height: 100px;
+}
+footer strong {
+  padding-right: 20px;
+}
+
+.img-parallax h1:last-child {
+  margin-bottom: 20vh;
+}
+
+.text-box {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+.text-box h1 {
+  background: rgba(0, 0, 0, 0);
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  color: black;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  max-width: 60rem;
+  padding: 0 20px;
+}
+.text-box2 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-box2 h1 {
+  background: rgb(0, 0, 0);
+  text-align: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  max-width: 60rem;
+  padding: 0 20px;
+}
+
+.content-box {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  color: black;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.content-div {
+  background: rgba(0, 0, 0, 0);
+  text-align: center;
+  margin-top: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  max-width: 800px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 60rem;
+  padding: 20px;
+}
+.textcontent {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  column-gap: 50px;
+  max-width: 800px;
+}
+.textcontent2 {
+  max-width: 800px;
+}
+.content-box div h2,
+p {
+  text-align: left;
+}
+.myVideo2 {
+  width: 100%;
+}
+
+.videoContent {
+  max-width: 800px;
+  padding-bottom: 30px;
+}
+
+.videoContent video {
+  margin-top: 20px;
+}
+.imagediv {
+  max-width: 800px;
+}
+.imagediv img {
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+.last-section h1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50vh;
+  margin: 0;
+  padding: 0;
+  z-index: 5000;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  max-width: 60rem;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.last-section .img6 {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 4000;
+  display: fixed;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.black-text {
+  color: black;
+  text-shadow: 0px 0px #000000;
+}
+
+.white-text {
+  color: white;
+  text-shadow: 2px 2px #000000;
+}
+
+.bkg {
+  height: 100vh;
+  background-color: black;
+  display: block;
+  margin-top: -400px;
+}
+
+.last-bkg {
+  height: 100vh;
+  background-color: white;
+  display: block;
+}
+
+.paddingFix {
+  padding-bottom: 400px;
+}
+
+/* --------------- Infographics Numbers --------------- */
+.infographic-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 3rem 0;
+}
+
+.infographic-info .infographic-subtitle {
+  text-align: center;
+  margin: 0;
+}
+
+.infographic-info h3 {
+  text-align: center;
+  margin: 0;
+}
+
+.infographic-info-container h3 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.infographic-info-container img {
+  /* height: 100px; */
+  max-width: 1fr;
+  padding: 2rem;
+}
+
+/* --------------- Infographics Piechart --------------- */
+.piechart-title {
+  margin: 3rem 0 -5rem 0;
+}
+.modal-img {
+  width: 80%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.infographic-piechart-cars {
+  background-color: rgb(248, 248, 248);
+}
+canvas {
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* MEDIA QUERIES MOBILE FIRST */
+@media only screen and (max-width: 600px) {
+  .infographic-info-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .content-box {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .text-box h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .img-parallax h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .video-parallax h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .last-section h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-box h1 {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .img-parallax h1 {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .video-parallax h1 {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .last-section h1 {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}

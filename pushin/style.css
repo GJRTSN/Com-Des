@@ -1,0 +1,11 @@
+.pushin-layer {
+  pointer-events: none;
+}
+
+.pushin-layer * {
+  pointer-events: auto;
+}
+
+.bkg-img {
+  background-image: "./src/img/foto1.jpg";
+}
