@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "year-nav" "main-content";
+}
+
+.content-wrapper {
+  grid-area: main-content;
+  grid-area: mid;
+  margin: 0 auto;
+  display: grid;
+}
+
+aside {
+  grid-area: year-nav;
+  position: fixed;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+aside ul li .indicator {
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1rem 0 0 3rem;
+  display: block;
+  text-decoration: none;
+  color: black;
+  /* height: 15px;
+    width: 15px;
+    border-radius: 50%; */
+  /* background-color: white; */
+}
+
+aside ul li .active {
+  transform: scale(2);
+  transition: transform 200ms ease-in-out;
+  font-weight: bold;
+}
+
+.year-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-content h1 {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 4rem;
+  color: Black;
+}
+
+.year-content div {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* HEADER h1 */
+header h1 {
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  padding-top: 30%;
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* HEADER image */
+.header-img {
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1624938518616-3be0add427d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+  background-size: cover;
+}
