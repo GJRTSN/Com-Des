@@ -24,9 +24,8 @@ main {
   height: 100vh;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.3421743697478992) 0%,
-    rgba(255, 255, 255, 0.6068802521008403) 5%,
-    rgba(255, 240, 178, 0) 51%
+    rgba(255, 255, 255, 0.850577731092437) 0%,
+    rgba(255, 240, 178, 0) 20%
   );
 }
 
@@ -59,7 +58,9 @@ aside ul li .indicator {
   margin: 1rem 0 0 3rem;
   display: block;
   text-decoration: none;
-  color: black;
+  color: rgba(0, 0, 0, 0.493);
+  margin-bottom: 5px;
+  font-weight: 600;
   /* height: 15px;
     width: 15px;
     border-radius: 50%; */
@@ -67,9 +68,13 @@ aside ul li .indicator {
 }
 
 aside ul li .active {
-  transform: scale(2);
+  transform: scale(2.5);
   transition: transform 200ms ease-in-out;
   font-weight: bold;
+  color: black;
+  background-color: white;
+  padding: 0px 5px;
+  border-left: 3px solid black;
 }
 
 .year-content {
@@ -100,8 +105,24 @@ aside ul li .active {
   border-left: 10px solid black;
 }
 
+.textbox2 {
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.842);
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
 /* TODO: Made by styling */
 .madeby {
+  color: black;
+  background-color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 /* Quotetext */
@@ -218,7 +239,8 @@ header h1 {
   position: relative;
   display: inline-block;
   z-index: 1;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  border-bottom: 1px dotted black;
+  cursor: pointer;
 }
 
 /* Tooltip text */
@@ -227,12 +249,13 @@ header h1 {
   width: 400px;
   bottom: 100%;
   left: 50%;
-  margin-left: -200px;
-  background-color: black;
+  margin-left: -300px;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.795);
   color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+  text-align: left;
+  padding: 15px 20px;
+  transition: all 0.2s;
 
   /* Position the tooltip text - see examples below! */
   position: absolute;
@@ -242,4 +265,5 @@ header h1 {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  transition: all 0.2s;
 }
