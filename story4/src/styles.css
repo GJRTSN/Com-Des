@@ -247,7 +247,8 @@ header h1 {
   display: inline-block;
   z-index: 1;
   border-bottom: 1px dotted black;
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: help;
 }
 
 /* Tooltip text */
