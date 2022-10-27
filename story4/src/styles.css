@@ -16,6 +16,9 @@ body {
 main {
   width: 100%;
 }
+p {
+  font-size: 1.2rem;
+}
 
 .linear {
   z-index: 1;
@@ -95,7 +98,7 @@ aside ul li .active {
 
 /* TODO: Textbox styling*/
 .textbox {
-  max-width: 500px;
+  max-width: 700px;
   background: rgba(255, 255, 255, 0.842);
   padding: 5px;
   padding-left: 30px;
@@ -106,13 +109,17 @@ aside ul li .active {
 }
 
 .textbox2 {
-  max-width: 500px;
   background: rgba(255, 255, 255, 0.842);
   padding: 5px;
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 20px;
   margin-right: 20px;
+}
+
+.textbox2 p {
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 /* TODO: Made by styling */
