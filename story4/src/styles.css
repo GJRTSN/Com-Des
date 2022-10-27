@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
 body {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -40,6 +42,7 @@ aside {
   top: 48%;
   transform: translate(-50%, -50%);
   z-index: 100000;
+  margin-left: 50px;
 }
 
 aside ul {
@@ -88,14 +91,22 @@ aside ul li .active {
 /* TODO: Textbox styling*/
 .textbox {
   max-width: 500px;
-  background: white;
+  background: rgba(255, 255, 255, 0.842);
   padding: 5px;
-  margin-bottom: 16px;
-  margin-right: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-left: 10px solid black;
 }
 
 /* TODO: Made by styling */
 .madeby {
+}
+
+/* Quotetext */
+.quoteText {
+  font-weight: 600;
 }
 
 /* HEADER h1 */
