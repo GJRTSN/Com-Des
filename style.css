@@ -89,4 +89,8 @@ header {
   article h2 a {
     font-size: 30px;
   }
+
+  #articleimg {
+    width: 100%;
+  }
 }
