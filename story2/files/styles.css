@@ -352,7 +352,7 @@ p {
 
 .infographic-info-container img {
   /* height: 100px; */
-  max-width: 1fr;
+  width: 10em;
   padding: 2rem;
 }
 
