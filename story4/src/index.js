@@ -1,5 +1,13 @@
 const indicators = document.querySelectorAll(".indicator");
 const sections = document.querySelectorAll(".year-content");
+const timeline = document.querySelector(".yearcount-hide");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY <= 2200) {
+    timeline.classList.remove("yearcount-show");
+    timeline.classList.add("yearcount-hide");
+  }
+});
 
 const resetCurrentActiveIndicator = () => {
   const activeIndicator = document.querySelector(".active");
@@ -12,10 +20,10 @@ const onSectionLeavesViewport = (section) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           resetCurrentActiveIndicator();
-          console.log(section);
           const element = entry.target;
           const indicator = document.querySelector(`a[href='#${element.id}']`);
           indicator.classList.add("active");
+          timeline.classList.add("yearcount-show");
           return;
         }
       });

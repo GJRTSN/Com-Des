@@ -20,6 +20,38 @@ p {
   font-size: 1.2rem;
 }
 
+.video-parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.video-parallax video {
+  min-width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -999;
+}
+
+.myVideo {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.first-text-parallax {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
 .linear {
   z-index: 1;
   position: fixed;
@@ -36,6 +68,16 @@ p {
   grid-area: mid;
   margin: 0 auto;
   display: grid;
+}
+
+.yearcount-hide {
+  transition: opacity 0.1s linear;
+  opacity: 0;
+}
+
+.yearcount-show {
+  transition: opacity 0.5s linear;
+  opacity: 1;
 }
 
 aside {
@@ -73,11 +115,12 @@ aside ul li .indicator {
 aside ul li .active {
   transform: scale(2.5);
   transition: transform 200ms ease-in-out;
-  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
   color: black;
-  background-color: white;
+  background-color: rgb(248, 170, 0);
   padding: 0px 5px;
-  border-left: 3px solid black;
+  border-left: 3px solid rgb(255, 255, 255);
+  border-radius: 1px;
 }
 
 .year-content {
@@ -98,6 +141,7 @@ aside ul li .active {
 
 /* TODO: Textbox styling*/
 .textbox {
+  z-index: 1;
   max-width: 700px;
   background: rgba(255, 255, 255, 0.842);
   padding: 5px;
@@ -119,7 +163,6 @@ aside ul li .active {
 
 .textbox2 p {
   font-size: 1.4rem;
-  font-weight: bold;
 }
 
 /* TODO: Made by styling */
@@ -171,6 +214,10 @@ header h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column; */
+}
+
+.img0 {
+  background-color: aquamarine;
 }
 
 .img1 {
