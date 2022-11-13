@@ -35,8 +35,16 @@ h1 {
   background-image: url("img/val-2.jpg");
 }
 
+.img3-3 {
+  background-image: url("img/mel2.jpg");
+}
+
 .img4 {
   background-image: url("img/val-5.jpg");
+}
+
+.img4-4 {
+  background-image: url("img/mel5.jpg");
 }
 
 .img5 {
@@ -45,6 +53,9 @@ h1 {
 
 .img6 {
   background-image: url("img/val-3.jpg");
+}
+.img6-6 {
+  background-image: url("img/mel3.jpg");
 }
 
 /* Map images */
