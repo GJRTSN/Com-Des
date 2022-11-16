@@ -97,9 +97,9 @@ h1 {
 
 .video-parallax h1 {
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   text-shadow: 2px 2px #000000;
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
@@ -129,7 +129,7 @@ h1 {
 .text-parallax {
   background: rgba(0, 0, 0, 0);
   color: #fff;
-  text-align: center;
+  text-align: left;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -138,7 +138,7 @@ h1 {
 
 .img-parallax h1 {
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   text-shadow: 2px 2px #000000;
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
@@ -159,9 +159,35 @@ h1 {
   font-family: "Cabin", Sans-Serif;
 }
 
+.text-box-mer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: "Cabin", Sans-Serif;
+  text-align: left;
+}
+
+.text-box-mer p {
+  max-width: 60rem;
+  font-size: 24px;
+  text-align: left;
+}
+
+.textContainer {
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .text-box h1 {
   background: rgba(0, 0, 0, 0);
-  text-align: center;
+  text-align: left;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -183,7 +209,7 @@ img {
 .vidtext {
   color: #fff;
   display: flex;
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   text-shadow: 2px 2px #000000;
   max-width: 60rem;
@@ -203,7 +229,7 @@ img {
   margin: 0 auto;
   font-size: 2rem;
   max-width: 60rem;
-  text-align: center;
+  text-align: left;
   padding: 0 20px;
 }
 
