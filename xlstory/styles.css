@@ -57,12 +57,21 @@ h1 {
 .img6-6 {
   background-image: url("img/mel3.jpg");
 }
-
+.bigMap {
+  width: 100%;
+  height: 100%;
+}
 /* Map images */
 .map-img1 {
   background-image: url("img/map.jpg");
 }
 
+.img10 {
+  background-image: url("/xlstory/img/kart/russland.jpg");
+}
+.img11 {
+  background-image: url("/xlstory/img/kart/petersburg.png");
+}
 /* Video Parallax */
 .video-parallax {
   width: 100%;
