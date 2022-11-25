@@ -22,41 +22,37 @@ h1 {
 .img1-1 {
   background-image: url("img/melEye.png");
 }
-
 .img2 {
   background-image: url("img/val-1.jpg");
 }
-
 .img2-2 {
   background-image: url("img/mel6.jpg");
 }
-
 .img3 {
   background-image: url("img/val-2.jpg");
 }
-
 .img3-3 {
   background-image: url("img/mel2.jpg");
 }
-
 .img4 {
   background-image: url("img/val-5.jpg");
 }
-
 .img4-4 {
   background-image: url("img/mel5.jpg");
 }
-
 .img5 {
   background-image: url("img/val-6.jpg");
 }
-
 .img6 {
   background-image: url("img/val-3.jpg");
 }
 .img6-6 {
   background-image: url("img/mel3.jpg");
 }
+.img7 {
+  background-image: url("img/mel4.jpg");
+}
+
 .bigMap {
   width: 100%;
   height: 100%;
@@ -133,9 +129,10 @@ h1 {
   text-align: left;
   font-size: 2rem;
   text-align: left;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px 5px #000000;
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
+  font-weight: 200;
 }
 
 .video-parallax h1:last-child {
@@ -145,6 +142,20 @@ h1 {
 /* Img Parallax */
 
 .img-parallax {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img-parallax2 {
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -195,9 +206,18 @@ h1 {
 .img-parallax h1 {
   font-size: 2rem;
   text-align: left;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px 5px #000000;
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
+  font-weight: 200;
+}
+.img-parallax2 h1 {
+  font-size: 2rem;
+  text-align: left;
+
+  font-family: "Cabin", Sans-Serif;
+  max-width: 60rem;
+  font-weight: 200;
 }
 
 .img-parallax h1:last-child {
@@ -213,6 +233,7 @@ h1 {
   align-items: center;
   color: black;
   font-family: "Cabin", Sans-Serif;
+  font-weight: 200;
 }
 
 .text-box-mer {
@@ -258,6 +279,7 @@ h1 {
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
   padding: 0 20px;
+  font-weight: 200;
 }
 img {
   margin-top: 20px;
@@ -276,7 +298,7 @@ img {
   font-size: 2rem;
   text-shadow: 2px 2px #000000;
   max-width: 60rem;
-  padding-top: 10%;
+
   position: absolute;
 }
 
@@ -347,6 +369,13 @@ footer {
 footer strong {
   padding-right: 20px;
 }
+.videodiv {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
 
 /* MEDIA QUERIES MOBILE FIRST */
 @media only screen and (max-width: 1000px) {
@@ -357,6 +386,12 @@ footer strong {
   }
 
   .img-parallax h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .img-parallax2 h1 {
     max-width: 40rem;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -382,9 +417,79 @@ footer strong {
     line-height: 2rem;
   }
 
+  .img-parallax2 h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .video-parallax h1 {
     max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+  .video-parallax2 h1 {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .img1 {
+    background-image: url("img/los-m-1.jpg");
+  }
+  .img1-1 {
+    background-image: url("img/mel-m-1.jpg");
+  }
+  .img2 {
+    background-image: url("img/los-m-2.jpg");
+  }
+  .img2-2 {
+    background-image: url("img/mel-m-2.jpg");
+  }
+  .img3 {
+    background-image: url("img/los-m-3.jpg");
+  }
+  .img4 {
+    background-image: url("img/los-m-4.jpg");
+  }
+  .img6 {
+    background-image: url("img/los-m-5.jpg");
+  }
+  .img7 {
+    background-image: url("img/mel-m-3.jpg");
+  }
+  .img4-4 {
+    background-image: url("img/mel-m-4.jpg");
+  }
+  .img6-6 {
+    background-image: url("img/mel-m-5.jpg");
+  }
+  .myVideo2 {
+    background: white;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    position: absolute;
+  }
+  .fifth {
+    background-color: white;
+  }
+  .videoMedia {
+    color: black;
+
+    text-shadow: none;
+  }
+
+  .videoMedia .img-parallax h1 {
+    text-shadow: none;
+  }
+
+  footer {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
   }
 }
