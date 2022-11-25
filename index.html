@@ -18,7 +18,10 @@
     <!-- loading -->
     <div id="loadingBar" class="center">
       <section class="loading-container">
-        <p>Remmenposten</p>
+        <!-- <p>Remmenposten</p> -->
+        <div class="img-container">
+          <img src="img/remmenposten-logo.png" width="250" />
+        </div>
         <div class="spinner">
           <div class="dot dot1"></div>
           <div class="dot dot2"></div>
@@ -80,7 +83,7 @@
         const content = document.getElementById("content");
         const loadingModal = document.getElementById("loadingBar");
         let width = 0;
-        let id = setInterval(frame, 50);
+        let id = setInterval(frame, 500);
         function frame() {
           if (width > 95) {
             loadingModal.classList.toggle("opacity");
