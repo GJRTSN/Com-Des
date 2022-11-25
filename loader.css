@@ -1,0 +1,122 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+  } */
+
+/* Fullsceren loading */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: white; */
+  z-index: 9001;
+}
+
+.article-loading-modal {
+  max-height: 500px;
+  max-width: 500px;
+  background-color: white;
+  filter: drop-shadow(0px 0px 10px rgb(201, 201, 201));
+}
+
+.content {
+  margin: 16px;
+}
+
+.content img {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.content h1 {
+  text-align: left;
+  padding: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.content p {
+  padding: 0;
+}
+
+.opacity {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Sentrerer boksen hvor animasjonen bor */
+.loading-container {
+  /* position: relative; */
+  width: 100%;
+  margin: 150px auto;
+  /* padding: 20px; */
+  /* border: 3px solid #ccc; */
+  /* margin-top: 200px; */
+}
+
+/* En "skjult" boks rundt de tre sirklene slik at de holder seg i midten */
+.spinner {
+  margin: auto;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  /* width: 170px; */
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Styling av hver sirkel */
+/* Trigger en animasjon kalt pulse ved bruk av animation: pulse */
+/* Animasjonen varer 1.5s, repeteres evig (infinite) */
+/* ease-in-out vil si at animasjonen starter sakte, øker hastigheten og avslutter sakte */
+/* both vil si at den beholder formen sin hele veien */
+.spinner .dot {
+  /* display: inline-block; */
+  width: 12px;
+  height: 12px;
+  margin: 22px 4px 16px 0px;
+  background-color: rgb(42, 42, 42);
+  border-radius: 100%;
+  animation: pulse 1.5s infinite ease-in-out both;
+}
+
+/* første sirkel skal starte etter 100ms */
+.spinner .dot1 {
+  animation-delay: 0.1s;
+}
+
+/* andre sirkel skal starte etter 200ms */
+.spinner .dot2 {
+  animation-delay: 0.2s;
+}
+
+/* andre sirkel skal starte etter 300ms */
+.spinner .dot3 {
+  animation-delay: 0.3s;
+}
+
+/* På 0%, 80% og 100% skal sirkelen være usynlig */
+/* På 40% skal den være full størrelse */
+/* Det som gir den en pulserende effekt */
+@keyframes pulse {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
