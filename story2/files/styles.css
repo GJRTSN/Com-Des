@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
 html,
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -192,7 +194,7 @@ footer strong {
   justify-content: center;
   align-items: center;
   color: black;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .text-box2 h1 {
@@ -217,7 +219,7 @@ footer strong {
   flex-direction: row;
   color: black;
   padding: 0px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -458,6 +460,10 @@ img {
   }
 }
 
+footer {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev,
@@ -473,11 +479,52 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .content-box {
-    padding: 20px;
+    /* padding: 20px; */
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
+  .infographic-info-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+
+  .myVideo {
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .myVideo2 {
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .videoContent {
+    width: 100%;
+  }
+
+  .textcontent {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .content-box {
+    width: 100%;
+    padding: 5%;
+    justify-content: baseline;
+  }
+
   .text-box h1 {
     max-width: 40rem;
     font-size: 1.5rem;
@@ -491,39 +538,13 @@ img {
   }
 
   .video-parallax h1 {
-    max-width: 40rem;
+    max-width: 100%;
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
   .last-section h1 {
     max-width: 40rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .text-box h1 {
-    max-width: 30rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .img-parallax h1 {
-    max-width: 30rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .video-parallax h1 {
-    max-width: 30rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .last-section h1 {
-    max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
