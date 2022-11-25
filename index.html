@@ -83,7 +83,7 @@
         const content = document.getElementById("content");
         const loadingModal = document.getElementById("loadingBar");
         let width = 0;
-        let id = setInterval(frame, 500);
+        let id = setInterval(frame, 50);
         function frame() {
           if (width > 95) {
             loadingModal.classList.toggle("opacity");
