@@ -56,6 +56,8 @@ p {
   text-align: center;
   height: 100vh;
   display: flex;
+  font-size: 2.5rem;
+  max-width: 60rem;
   align-items: center;
   padding: 0 20px;
 }
@@ -313,7 +315,7 @@ header h1 {
   bottom: 100%;
   left: 50%;
   margin-left: -300px;
-  font-size: 12px;
+  font-size: 20px;
   background-color: rgba(0, 0, 0, 0.795);
   color: #fff;
   text-align: left;
@@ -330,4 +332,9 @@ header h1 {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   transition: all 0.2s;
+}
+@media only screen and (max-width: 600px) {
+  .img6 {
+    background-image: url("../src/img/6-m.jpg");
+  }
 }

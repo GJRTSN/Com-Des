@@ -329,4 +329,19 @@ footer strong {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  .img-parallax {
+    flex-direction: row;
+  }
+  .img2 {
+    background-image: url("src/img/foto2-m.jpg");
+  }
+  .img8 {
+    background-image: url("src/img/foto8-m.jpg");
+  }
+  .img14 {
+    background-image: url("src/img/foto14-m.jpg");
+  }
+  .img15 {
+    background-image: url("src/img/foto15-m.jpg");
+  }
 }
