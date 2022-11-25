@@ -155,6 +155,20 @@ h1 {
   align-items: center;
   flex-direction: column;
 }
+.img-parallax2 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .text-parallax {
   background: rgba(0, 0, 0, 0);
@@ -193,6 +207,14 @@ h1 {
   font-size: 2rem;
   text-align: left;
   text-shadow: 2px 2px 5px #000000;
+  font-family: "Cabin", Sans-Serif;
+  max-width: 60rem;
+  font-weight: 200;
+}
+.img-parallax2 h1 {
+  font-size: 2rem;
+  text-align: left;
+
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
   font-weight: 200;
@@ -257,6 +279,7 @@ h1 {
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
   padding: 0 20px;
+  font-weight: 200;
 }
 img {
   margin-top: 20px;
@@ -275,7 +298,7 @@ img {
   font-size: 2rem;
   text-shadow: 2px 2px #000000;
   max-width: 60rem;
-  padding-top: 10%;
+
   position: absolute;
 }
 
@@ -368,6 +391,12 @@ footer strong {
     line-height: 2rem;
   }
 
+  .img-parallax2 h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .video-parallax h1 {
     max-width: 40rem;
     font-size: 1.5rem;
@@ -388,7 +417,18 @@ footer strong {
     line-height: 2rem;
   }
 
+  .img-parallax2 h1 {
+    max-width: 40rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .video-parallax h1 {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .video-parallax2 h1 {
     max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -436,6 +476,20 @@ footer strong {
   }
   .videoMedia {
     color: black;
-    font-weight: 300;
+
+    text-shadow: none;
+  }
+
+  .videoMedia .img-parallax h1 {
+    text-shadow: none;
+  }
+
+  footer {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
   }
 }
