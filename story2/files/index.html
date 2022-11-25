@@ -10,6 +10,8 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="styles.css" media="all" />
+    <link rel="stylesheet" href="loader.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700"
       rel="stylesheet"
@@ -19,679 +21,843 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
     <style>
-			/* div#chart {
+      /* div#chart {
 				width: 400px;
 				height: 400px;
 				margin: 100px auto;
 			} */
 
-			canvas:hover {
-				cursor: pointer;
-				cursor: hand;
-			}
+      canvas:hover {
+        cursor: pointer;
+        cursor: hand;
+      }
 
-			.modalbox {
-				padding: 25px;
-	
-				height: auto;
-				max-width: 700px;
-				display: none;
-				z-index:9999;
-			}
+      .modalbox {
+        padding: 25px;
 
-			.iw-modalOverlay{
-				background: rgb(0, 0, 0);
-				opacity: 0.9;
-			}
+        height: auto;
+        max-width: 700px;
+        display: none;
+        z-index: 9999;
+      }
 
-
-		</style>
+      .iw-modalOverlay {
+        background: rgb(0, 0, 0);
+        opacity: 0.9;
+      }
+    </style>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="modalbox.js"></script>
     <script type="text/javascript" src="chart.js"></script>
   </head>
   <body>
-    <!-- Image parallax -->
-    <section class="video-parallax">
-      <video autoplay muted loop class="myVideo">
-        <source src="img/drone1.mp4" type="video/mp4" />
-      </video>
-      <h1 class="text-parallax">Brutale drønn høres gjennom Sogndalsfjøra.</h1>
-    </section>
-    <!-- Text  -->
-    <section class="text-box2">
-      <h1>Over 60 muskelbiler er stilt opp og starter motorene sine.</h1>
-    </section>
-    <!-- Video -->
-    <section class="content-box">
-      <div classname="content-div">
-        <div class="textcontent">
-          <div>
-            <h2>Dette er starten på Motorfest</h2>
-          </div>
-          <div class="videoContent">
-            <video autoplay muted loop class="myVideo2">
-              <source src="img/drone2.mp4" type="video/mp4" />
-            </video>
-            <span
-              >Startlinjen fyller seg sakte men sikkert opp med spreke biler. De
-              skal tilbringe de neste fire dagene sammen på veien.</span
+    <!-- loading -->
+    <div id="loadingBar" class="center">
+      <article class="article-loading-modal">
+        <section class="content">
+          <img src="./img/mf4.jpg" alt="" />
+          <h1>Kjempet for å beholde foreningen</h1>
+          <p>Vennligst vent. Artikkelen er klar til å leses hvert øyeblikk!</p>
+          <!-- <div class="loading-bar"></div> -->
+          <div class="w3-light-grey">
+            <div
+              id="myBar"
+              class="w3-container w3-green w3-center"
+              style="width: 20%"
             >
-          </div>
-          <p>
-            Mannen som står bak arrangementet er Dag Gjertsen (32) fra
-            Uskedalen. Han er ivrig og engasjert, han virker veldig klar til å
-            fortelle mer om hvorfor han startet Motorfest.
-          </p>
-        </div>
-        <div class="imagediv">
-          <img
-            src="img/dag1.jpg"
-            alt="Dag Gjertsen ved siden av sin ford mustang"
-          />
-        </div>
-        <span>Her avbildet ved siden av sin Ford Mustang.</span>
-        <div class="textcontent2">
-          <p>
-            <strong>Gjertsen forteller at Motorfest ble startet </strong>på
-            grunn av pandemien, da alle var sittende hjemme og det var ikke mye
-            sosialt å bedrive tiden med.
-          </p>
-
-          <p>
-            - Jeg hadde gledet meg masse til å reise rundt i en ny bil jeg
-            nettopp hadde importert fra USA, men så ble alt stengt ned. Bare bil
-            i seg selv er stas, men det å kjøre biltur sammen med andre i et
-            hyggelig fellesskap er skikkelig stas, derfor ville jeg gjøre noe
-            med det.
-          </p>
-          <div class="imagediv">
-            <img src="img/mf0.jpg" alt="Mennesker samlet" />
-          </div>
-          <span>Endelig kan folk møtes igjen.</span>
-          <p>
-            - I år er vi 115 mennesker i 62 biler samlet, sier han engasjert.
-          </p>
-          
-          <!------------ Infographics Motorfest info ------------>
-          <div class="infographic-info-container">
-            <div class="infographic-info">
-              <img src="img/start.svg" alt="" >
-              <p class="infographic-subtitle">Startet</p>
-              <h3>2021</h3>
-            </div>
-            <div class="infographic-info">
-              <img src="img/car.svg" alt="" >
-              <p class="infographic-subtitle">Biler</p>
-              <h3>62</h3>
-            </div>
-            <div class="infographic-info">
-              <img src="img/human.svg" alt="" >
-              <p class="infographic-subtitle">Deltagere</p>
-              <h3>115</h3>
-            </div>
-            <div class="infographic-info">
-              <img src="img/distance.svg" alt="" >
-              <p class="infographic-subtitle">Kilometer</p>
-              <h3>662</h3>
-            </div>
-            <div class="infographic-info">
-              <img src="img/engine.svg" alt="" >
-              <p class="infographic-subtitle">Hestekrefter</p>
-              <h3>10 000 +</h3>
+              0%
             </div>
           </div>
-          <p>
-            <strong> Det er ikke hver dag noen arrangerer</strong> et
-            arrangement som det Gjertsen har gjort allerede to ganger. Det
-            er lange turer, stort areal å dekke. Men også mye godt å spise og
-            drikke.
-          </p>
-          <p>
-            - For det første så svarer deltakerne på en spørreundersøkelse etter
-            endt arrangement, der de bl.a. kan komme med ønsker til neste års
-            tur.
-          </p>
-          <p>
-            I tillegg er det en del av dem som er ekstra engasjerte, som jeg
-            snakker mye med ang. rutevalg og ønsker for kommende turer. Jeg
-            starter gjerne med flere ulike alternativer, og jobber ut ifra at en
-            aktuell rute skal ha:
-          </p>
-          <ul>
-            <li>Underholdende veier (det betyr vanligvis lite europavei)</li>
-            <li>Hoteller med god standard på fine lokasjoner.</li>
-            <li>Lunsjsteder med riktig meny og gruppekapasitet.</li>
-            <li>Spektakulær og severdig natur.</li>
-            <li>Passelig kjørelengde.</li>
-            <li>Tilgjengelig 98 oktan innenfor gitte intervall.</li>
-          </ul>
-          <p>
-            Når alle kriteriene er på plass, så er neste steg å finne ledig
-            hotellkapasitet, samt priser som er innenfor budsjett. Det kan være
-            ganske krevende å finne såpass stor, ledig kapasitet for tre
-            påfølgende netter i en rute som også skal møte mange andre krav.
-            Derfor starter jeg denne jobben mange måneder i forveien. Når all
-            logistikk er planlagt, så kjører jeg gjerne opp ruten selv for å
-            kvalitetssikre både veistandard, lunsjsteder, stoppeplasser og
-            hoteller.
-          </p>
-          <p>
-            Derfor starter jeg denne jobben mange måneder i forveien. Når all
-            logistikk er planlagt, så kjører jeg gjerne opp ruten selv for å
-            kvalitetssikre både veistandard, lunsjsteder, stoppeplasser og
-            hoteller.
-          </p>
-          <div class="videoContent">
-            <video autoplay muted loop class="myVideo2">
-              <source src="img/video1.mp4" type="video/mp4" />
-            </video>
-            <span
-              >Sjåførene er klare ved startlinjen og ivrige etter å sette
-              igang.</span
-            >
+        </section>
+      </article>
+    </div>
+    <div id="content">
+      <!-- Image parallax -->
+      <section class="video-parallax">
+        <video autoplay muted loop class="myVideo">
+          <source src="img/drone1.mp4" type="video/mp4" />
+        </video>
+        <h1 class="text-parallax">
+          Brutale drønn høres gjennom Sogndalsfjøra.
+        </h1>
+      </section>
+      <!-- Text  -->
+      <section class="text-box2">
+        <h1>Over 60 muskelbiler er stilt opp og starter motorene sine.</h1>
+      </section>
+      <!-- Video -->
+      <section class="content-box">
+        <div classname="content-div">
+          <div class="textcontent">
+            <div>
+              <h2>Dette er starten på Motorfest</h2>
+            </div>
+            <div class="videoContent">
+              <video autoplay muted loop class="myVideo2">
+                <source src="img/drone2.mp4" type="video/mp4" />
+              </video>
+              <span
+                >Startlinjen fyller seg sakte men sikkert opp med spreke biler.
+                De skal tilbringe de neste fire dagene sammen på veien.</span
+              >
+            </div>
             <p>
-              <strong>Gjertsen vil fortsette med Motorfest fremover.</strong> Hvor
-              lenge det blir vet han ikke.
+              Mannen som står bak arrangementet er Dag Gjertsen (32) fra
+              Uskedalen. Han er ivrig og engasjert, han virker veldig klar til å
+              fortelle mer om hvorfor han startet Motorfest.
             </p>
+          </div>
+          <div class="imagediv">
+            <img
+              src="img/dag1.jpg"
+              alt="Dag Gjertsen ved siden av sin ford mustang"
+            />
+          </div>
+          <span>Her avbildet ved siden av sin Ford Mustang.</span>
+          <div class="textcontent2">
             <p>
-              - Så lenge jeg har kapasitet til det selv, så lenge jeg finner
-              glede i det og så lenge deltakerne ønsker nye turer.
+              <strong>Gjertsen forteller at Motorfest ble startet </strong>på
+              grunn av pandemien, da alle var sittende hjemme og det var ikke
+              mye sosialt å bedrive tiden med.
+            </p>
+
+            <p>
+              - Jeg hadde gledet meg masse til å reise rundt i en ny bil jeg
+              nettopp hadde importert fra USA, men så ble alt stengt ned. Bare
+              bil i seg selv er stas, men det å kjøre biltur sammen med andre i
+              et hyggelig fellesskap er skikkelig stas, derfor ville jeg gjøre
+              noe med det.
             </p>
             <div class="imagediv">
-              <img src="img/dag2.jpg" alt="Mennesker samlet" />
+              <img src="img/mf0.jpg" alt="Mennesker samlet" />
             </div>
-            <span
-              >Dag Gjertsen holder førermøte i møterommet på Quality Hotel.</span
-            >
+            <span>Endelig kan folk møtes igjen.</span>
+            <p>
+              - I år er vi 115 mennesker i 62 biler samlet, sier han engasjert.
+            </p>
+
             <!------------ Infographics Motorfest info ------------>
-            <h2 class="piechart-title">Se inndelingen av deltakerbilene - klikk for å se bilder!</h2>
-            <div class="infographic-piechart-cars">
-              
-              <div id="chart">
-                <canvas id="piechart"></canvas>
-                
+            <div class="infographic-info-container">
+              <div class="infographic-info">
+                <img src="img/start.svg" alt="" />
+                <p class="infographic-subtitle">Startet</p>
+                <h3>2021</h3>
               </div>
-              
-              <!-- German Cars -->
-              <div id="modal-0" class="modalbox">
-                <div class="slideshow-container">
+              <div class="infographic-info">
+                <img src="img/car.svg" alt="" />
+                <p class="infographic-subtitle">Biler</p>
+                <h3>62</h3>
+              </div>
+              <div class="infographic-info">
+                <img src="img/human.svg" alt="" />
+                <p class="infographic-subtitle">Deltagere</p>
+                <h3>115</h3>
+              </div>
+              <div class="infographic-info">
+                <img src="img/distance.svg" alt="" />
+                <p class="infographic-subtitle">Kilometer</p>
+                <h3>662</h3>
+              </div>
+              <div class="infographic-info">
+                <img src="img/engine.svg" alt="" />
+                <p class="infographic-subtitle">Hestekrefter</p>
+                <h3>10 000 +</h3>
+              </div>
+            </div>
+            <p>
+              <strong> Det er ikke hver dag noen arrangerer</strong> et
+              arrangement som det Gjertsen har gjort allerede to ganger. Det er
+              lange turer, stort areal å dekke. Men også mye godt å spise og
+              drikke.
+            </p>
+            <p>
+              - For det første så svarer deltakerne på en spørreundersøkelse
+              etter endt arrangement, der de bl.a. kan komme med ønsker til
+              neste års tur.
+            </p>
+            <p>
+              I tillegg er det en del av dem som er ekstra engasjerte, som jeg
+              snakker mye med ang. rutevalg og ønsker for kommende turer. Jeg
+              starter gjerne med flere ulike alternativer, og jobber ut ifra at
+              en aktuell rute skal ha:
+            </p>
+            <ul>
+              <li>Underholdende veier (det betyr vanligvis lite europavei)</li>
+              <li>Hoteller med god standard på fine lokasjoner.</li>
+              <li>Lunsjsteder med riktig meny og gruppekapasitet.</li>
+              <li>Spektakulær og severdig natur.</li>
+              <li>Passelig kjørelengde.</li>
+              <li>Tilgjengelig 98 oktan innenfor gitte intervall.</li>
+            </ul>
+            <p>
+              Når alle kriteriene er på plass, så er neste steg å finne ledig
+              hotellkapasitet, samt priser som er innenfor budsjett. Det kan
+              være ganske krevende å finne såpass stor, ledig kapasitet for tre
+              påfølgende netter i en rute som også skal møte mange andre krav.
+              Derfor starter jeg denne jobben mange måneder i forveien. Når all
+              logistikk er planlagt, så kjører jeg gjerne opp ruten selv for å
+              kvalitetssikre både veistandard, lunsjsteder, stoppeplasser og
+              hoteller.
+            </p>
+            <p>
+              Derfor starter jeg denne jobben mange måneder i forveien. Når all
+              logistikk er planlagt, så kjører jeg gjerne opp ruten selv for å
+              kvalitetssikre både veistandard, lunsjsteder, stoppeplasser og
+              hoteller.
+            </p>
+            <div class="videoContent">
+              <video autoplay muted loop class="myVideo2">
+                <source src="img/video1.mp4" type="video/mp4" />
+              </video>
+              <span
+                >Sjåførene er klare ved startlinjen og ivrige etter å sette
+                igang.</span
+              >
+              <p>
+                <strong>Gjertsen vil fortsette med Motorfest fremover.</strong>
+                Hvor lenge det blir vet han ikke.
+              </p>
+              <p>
+                - Så lenge jeg har kapasitet til det selv, så lenge jeg finner
+                glede i det og så lenge deltakerne ønsker nye turer.
+              </p>
+              <div class="imagediv">
+                <img src="img/dag2.jpg" alt="Mennesker samlet" />
+              </div>
+              <span
+                >Dag Gjertsen holder førermøte i møterommet på Quality
+                Hotel.</span
+              >
+              <!------------ Infographics Motorfest info ------------>
+              <h2 class="piechart-title">
+                Se inndelingen av deltakerbilene - klikk for å se bilder!
+              </h2>
+              <div class="infographic-piechart-cars">
+                <div id="chart">
+                  <canvas id="piechart"></canvas>
+                </div>
 
-                  <!-- AUDI -->
-                  <div class="mySlides fade">
-                    <div class="numbertext">1 / 27</div>
-                    <img src="piechart/ger/audia6.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">2 / 27</div>
-                    <img src="piechart/ger/audir8.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">3 / 27</div>
-                    <img src="piechart/ger/audirs6.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">4 / 27</div>
-                    <img src="piechart/ger/audirs31.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">5 / 27</div>
-                    <img src="piechart/ger/audirs32.jpg" style="width:100%">
-                  </div>
-                  
-                  <!-- BMW -->
-                  <div class="mySlides fade">
-                    <div class="numbertext">6 / 27</div>
-                    <img src="piechart/ger/bmw6.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">7 / 27</div>
-                    <img src="piechart/ger/bmwm2.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">8 / 27</div>
-                    <img src="piechart/ger/bmwm22.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">9 / 27</div>
-                    <img src="piechart/ger/bmwm31.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">10 / 27</div>
-                    <img src="piechart/ger/bmwm32.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">11 / 27</div>
-                    <img src="piechart/ger/bmwm41.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">12 / 27</div>
-                    <img src="piechart/ger/bmwm42.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">13 / 27</div>
-                    <img src="piechart/ger/bmwm51.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">14 / 27</div>
-                    <img src="piechart/ger/bmwv12.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">15 / 27</div>
-                    <img src="piechart/ger/bmwx5.jpg" style="width:100%">
-                  </div>
+                <!-- German Cars -->
+                <div id="modal-0" class="modalbox">
+                  <div class="slideshow-container">
+                    <!-- AUDI -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 27</div>
+                      <img src="piechart/ger/audia6.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 27</div>
+                      <img src="piechart/ger/audir8.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 27</div>
+                      <img src="piechart/ger/audirs6.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">4 / 27</div>
+                      <img
+                        src="piechart/ger/audirs31.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">5 / 27</div>
+                      <img
+                        src="piechart/ger/audirs32.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
 
-                  <!-- Mercedes -->
-                  <div class="mySlides fade">
-                    <div class="numbertext">16 / 27</div>
-                    <img src="piechart/ger/mbamg1.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">17 / 27</div>
-                    <img src="piechart/ger/mbamg2.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">18 / 27</div>
-                    <img src="piechart/ger/mbamg3.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">19 / 27</div>
-                    <img src="piechart/ger/mbamg4.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">20 / 27</div>
-                    <img src="piechart/ger/mbamg5.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">21 / 27</div>
-                    <img src="piechart/ger/mbamg6.jpg" style="width:100%">
-                  </div>
+                    <!-- BMW -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">6 / 27</div>
+                      <img src="piechart/ger/bmw6.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">7 / 27</div>
+                      <img src="piechart/ger/bmwm2.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">8 / 27</div>
+                      <img src="piechart/ger/bmwm22.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">9 / 27</div>
+                      <img src="piechart/ger/bmwm31.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">10 / 27</div>
+                      <img src="piechart/ger/bmwm32.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">11 / 27</div>
+                      <img src="piechart/ger/bmwm41.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">12 / 27</div>
+                      <img src="piechart/ger/bmwm42.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">13 / 27</div>
+                      <img src="piechart/ger/bmwm51.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">14 / 27</div>
+                      <img src="piechart/ger/bmwv12.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">15 / 27</div>
+                      <img src="piechart/ger/bmwx5.jpg" style="width: 100%" />
+                    </div>
 
-                  <!-- Porsche -->
-                  <div class="mySlides fade">
-                    <div class="numbertext">22 / 27</div>
-                    <img src="piechart/ger/porsche1.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">23 / 27</div>
-                    <img src="piechart/ger/porsche2.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">24 / 27</div>
-                    <img src="piechart/ger/porsche3.jpg" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">25 / 27</div>
-                    <img src="piechart/ger/porsche4.jpg" style="width:100%">
-                  </div>
+                    <!-- Mercedes -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">16 / 27</div>
+                      <img src="piechart/ger/mbamg1.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">17 / 27</div>
+                      <img src="piechart/ger/mbamg2.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">18 / 27</div>
+                      <img src="piechart/ger/mbamg3.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">19 / 27</div>
+                      <img src="piechart/ger/mbamg4.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">20 / 27</div>
+                      <img src="piechart/ger/mbamg5.jpg" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">21 / 27</div>
+                      <img src="piechart/ger/mbamg6.jpg" style="width: 100%" />
+                    </div>
 
+                    <!-- Porsche -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">22 / 27</div>
+                      <img
+                        src="piechart/ger/porsche1.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">23 / 27</div>
+                      <img
+                        src="piechart/ger/porsche2.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">24 / 27</div>
+                      <img
+                        src="piechart/ger/porsche3.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">25 / 27</div>
+                      <img
+                        src="piechart/ger/porsche4.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
 
-                  <a class="prev" onclick="plusSlides(-1)">❮</a>
-                  <a class="next" onclick="plusSlides(1)">❯</a>
-                  
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                  </div>
+                </div>
+                <!-- America Cars -->
+                <div id="modal-1" class="modalbox">
+                  <div class="slideshow-container">
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">1 / 21</div>
+                      <img
+                        src="piechart/usa/chevycamaro.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">2 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette1.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">3 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette2.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">4 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette3.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">5 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette4.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">6 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette5.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">7 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette6.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">8 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette7.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">9 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette8.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">10 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette9.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">11 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette10.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">12 / 21</div>
+                      <img
+                        src="piechart/usa/chevyvette11.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">13 / 21</div>
+                      <img
+                        src="piechart/usa/dodgesrt1.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">14 / 21</div>
+                      <img
+                        src="piechart/usa/dodgesrt2.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">15 / 21</div>
+                      <img
+                        src="piechart/usa/fordfocusrs.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">16 / 21</div>
+                      <img
+                        src="piechart/usa/fordmustang.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">17 / 21</div>
+                      <img
+                        src="piechart/usa/fordmustang2.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">18 / 21</div>
+                      <img
+                        src="piechart/usa/fordmustang3.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">19 / 21</div>
+                      <img
+                        src="piechart/usa/fordmustang4.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">20 / 21</div>
+                      <img
+                        src="piechart/usa/fordmustang5.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides2 fade">
+                      <div class="numbertext">21 / 21</div>
+                      <img src="piechart/usa/transam.jpg" style="width: 100%" />
+                    </div>
+
+                    <a class="prev" onclick="plusSlides2(-1)">❮</a>
+                    <a class="next" onclick="plusSlides2(1)">❯</a>
+                  </div>
+                </div>
+                <!-- Japan Cars -->
+                <div id="modal-2" class="modalbox">
+                  <div class="slideshow-container">
+                    <div class="mySlides3 fade">
+                      <div class="numbertext">1 / 4</div>
+                      <img src="piechart/jap/lexus.jpg" style="width: 100%" />
+                    </div>
+
+                    <div class="mySlides3 fade">
+                      <div class="numbertext">2 / 4</div>
+                      <img
+                        src="piechart/jap/nissangtr.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides3 fade">
+                      <div class="numbertext">3 / 4</div>
+                      <img
+                        src="piechart/jap/nissangtr2.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <div class="mySlides3 fade">
+                      <div class="numbertext">4 / 4</div>
+                      <img
+                        src="piechart/jap/toyotasupra.jpg"
+                        style="width: 100%"
+                      />
+                    </div>
+
+                    <a class="prev" onclick="plusSlides3(-1)">❮</a>
+                    <a class="next" onclick="plusSlides3(1)">❯</a>
+                  </div>
+                </div>
+                <!-- British Cars -->
+                <div id="modal-3" class="modalbox">
+                  <div class="slideshow-container">
+                    <div class="mySlides4 fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="piechart/uk/accobra.jpg" style="width: 100%" />
+                    </div>
+
+                    <div class="mySlides4 fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="piechart/uk/lotus1.jpg" style="width: 100%" />
+                    </div>
+
+                    <div class="mySlides4 fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="piechart/uk/lotus2.jpg" style="width: 100%" />
+                    </div>
+
+                    <a class="prev" onclick="plusSlides4(-1)">❮</a>
+                    <a class="next" onclick="plusSlides4(1)">❯</a>
+                  </div>
+                </div>
+                <!-- Italian Cars -->
+                <div id="modal-4" class="modalbox">
+                  <div class="slideshow-container">
+                    <div class="mySlides5 fade">
+                      <div class="numbertext">1 / 1</div>
+                      <img src="piechart/it/rari.jpg" style="width: 100%" />
+                    </div>
+
+                    <a class="prev" onclick="plusSlides5(-1)">❮</a>
+                    <a class="next" onclick="plusSlides5(1)">❯</a>
+                  </div>
                 </div>
               </div>
-              <!-- America Cars -->
-              <div id="modal-1" class="modalbox">
-                <div class="slideshow-container">
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">1 / 21</div>
-                    <img src="piechart/usa/chevycamaro.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">2 / 21</div>
-                    <img src="piechart/usa/chevyvette1.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">3 / 21</div>
-                    <img src="piechart/usa/chevyvette2.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">4 / 21</div>
-                    <img src="piechart/usa/chevyvette3.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">5 / 21</div>
-                    <img src="piechart/usa/chevyvette4.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">6 / 21</div>
-                    <img src="piechart/usa/chevyvette5.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">7 / 21</div>
-                    <img src="piechart/usa/chevyvette6.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">8 / 21</div>
-                    <img src="piechart/usa/chevyvette7.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">9 / 21</div>
-                    <img src="piechart/usa/chevyvette8.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">10 / 21</div>
-                    <img src="piechart/usa/chevyvette9.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">11 / 21</div>
-                    <img src="piechart/usa/chevyvette10.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">12 / 21</div>
-                    <img src="piechart/usa/chevyvette11.jpg" style="width:100%">
-                  </div>
 
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">13 / 21</div>
-                    <img src="piechart/usa/dodgesrt1.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides fade">
-                    <div class="numbertext">14 / 21</div>
-                    <img src="piechart/usa/dodgesrt2.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides fade">
-                    <div class="numbertext">15 / 21</div>
-                    <img src="piechart/usa/fordfocusrs.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides fade">
-                    <div class="numbertext">16 / 21</div>
-                    <img src="piechart/usa/fordmustang.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides fade">
-                    <div class="numbertext">17 / 21</div>
-                    <img src="piechart/usa/fordmustang2.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">18 / 21</div>
-                    <img src="piechart/usa/fordmustang3.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">19 / 21</div>
-                    <img src="piechart/usa/fordmustang4.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">20 / 21</div>
-                    <img src="piechart/usa/fordmustang5.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides2 fade">
-                    <div class="numbertext">21 / 21</div>
-                    <img src="piechart/usa/transam.jpg" style="width:100%">
-                  </div>
-                  
-                  <a class="prev" onclick="plusSlides2(-1)">❮</a>
-                  <a class="next" onclick="plusSlides2(1)">❯</a>
+              <p>
+                <strong
+                  >- Årets tur bestod av veldig mange gode minner.
+                </strong>
+                Vi hadde mange spektakulære kjøre- og naturopplevelser, men det
+                som for meg står igjen som det sterkeste er fellesskapet.
+              </p>
+              <p>
+                - Det er alltid spennende å se hvordan gruppedynamikken blir, og
+                i mine øyne kunne ikke den blitt bedre. Det at folk har det gøy
+                sammen, får nye venner og skaper nye minner er det mest givende
+                for meg.
+              </p>
+              <div class="imagediv">
+                <img src="img/mf4.jpg" alt="Mennesker samlet" />
               </div>
-      
+              <span>Deltakerne venter på neste ferge på Hella Fergekai.</span>
+              <p>
+                Det ligger nesten et år med jobbing i helger, ettermiddager og
+                sene kvelder bak et slikt arrangement, og det å ha fornøyde
+                deltagere gjør alt sammen verdt det.
+              </p>
+              <div class="imagediv">
+                <img src="img/mf5.jpg" alt="Mennesker samlet" />
               </div>
-              <!-- Japan Cars -->
-              <div id="modal-2" class="modalbox">
-                <div class="slideshow-container">
-                  <div class="mySlides3 fade">
-                    <div class="numbertext">1 / 4</div>
-                    <img src="piechart/jap/lexus.jpg" style="width:100%">
-                  </div>
-
-                  <div class="mySlides3 fade">
-                    <div class="numbertext">2 / 4</div>
-                    <img src="piechart/jap/nissangtr.jpg" style="width:100%">
-                  </div>
-
-                  <div class="mySlides3 fade">
-                    <div class="numbertext">3 / 4</div>
-                    <img src="piechart/jap/nissangtr2.jpg" style="width:100%">
-                  </div>
-
-                  <div class="mySlides3 fade">
-                    <div class="numbertext">4 / 4</div>
-                    <img src="piechart/jap/toyotasupra.jpg" style="width:100%">
-                  </div>
-                  
-                  <a class="prev" onclick="plusSlides3(-1)">❮</a>
-                  <a class="next" onclick="plusSlides3(1)">❯</a>
-              </div>
-      
-              </div>
-              <!-- British Cars -->
-              <div id="modal-3" class="modalbox">
-                <div class="slideshow-container">
-                  <div class="mySlides4 fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="piechart/uk/accobra.jpg" style="width:100%">
-                  </div>
-
-                  <div class="mySlides4 fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="piechart/uk/lotus1.jpg" style="width:100%">
-                  </div>
-
-                  <div class="mySlides4 fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="piechart/uk/lotus2.jpg" style="width:100%">
-                  </div>
-                  
-                  <a class="prev" onclick="plusSlides4(-1)">❮</a>
-                  <a class="next" onclick="plusSlides4(1)">❯</a>
-              </div>
-      
-              </div>
-              <!-- Italian Cars -->
-              <div id="modal-4" class="modalbox">
-                <div class="slideshow-container">
-                  <div class="mySlides5 fade">
-                    <div class="numbertext">1 / 1</div>
-                    <img src="piechart/it/rari.jpg" style="width:100%">
-                  </div>
-                  
-                  <a class="prev" onclick="plusSlides5(-1)">❮</a>
-                  <a class="next" onclick="plusSlides5(1)">❯</a>
-              </div>
-      
-              </div>
+              <span>Lunsjpause på Hotel Geiranger</span>
             </div>
-            
-            <p>
-              <strong>- Årets tur bestod av veldig mange gode minner. </strong> Vi hadde mange
-              spektakulære kjøre- og naturopplevelser, men det som for meg står
-              igjen som det sterkeste er fellesskapet.
-            </p>
-            <p>
-              - Det er alltid spennende å se hvordan gruppedynamikken blir, og i
-              mine øyne kunne ikke den blitt bedre. Det at folk har det gøy
-              sammen, får nye venner og skaper nye minner er det mest givende
-              for meg.
-            </p>
-            <div class="imagediv">
-              <img src="img/mf4.jpg" alt="Mennesker samlet" />
-            </div>
-            <span>Deltakerne venter på neste ferge på Hella Fergekai.</span>
-            <p>
-              Det ligger nesten et år med jobbing i helger, ettermiddager og
-              sene kvelder bak et slikt arrangement, og det å ha fornøyde
-              deltagere gjør alt sammen verdt det.
-            </p>
-            <div class="imagediv">
-              <img src="img/mf5.jpg" alt="Mennesker samlet" />
-            </div>
-            <span>Lunsjpause på Hotel Geiranger</span>
-          
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Text -->
-    <!-- Image -->
-    <section class="img-parallax img2">
-      <h1 class="text-parallax">
-        - Det er ikke umulig at Motorfest strekker seg til utlandet i fremtiden.
-      </h1>
-    </section>
+      <!-- Text -->
+      <!-- Image -->
+      <section class="img-parallax img2">
+        <h1 class="text-parallax">
+          - Det er ikke umulig at Motorfest strekker seg til utlandet i
+          fremtiden.
+        </h1>
+      </section>
 
-    <!-- Image -->
-    <section class="img-parallax img3">
-      <h1 class="text-parallax">
-        Gjertsen og resten av deltakerne har flere hundrevis med kilometer
-        og liter drivstoff foran seg, de gleder seg veldig til resten av turen.
-      </h1>
-    </section>
-    <footer><strong>Laget av: </strong>Stig Ark, Jostein Gjertsen og Joakim Vu - (foto og video av Jostein Gjertsen)</p></footer>
+      <!-- Image -->
+      <section class="img-parallax img3">
+        <h1 class="text-parallax">
+          Gjertsen og resten av deltakerne har flere hundrevis med kilometer og
+          liter drivstoff foran seg, de gleder seg veldig til resten av turen.
+        </h1>
+      </section>
+      <footer>
+        <strong>Laget av: </strong>Stig Ark, Jostein Gjertsen og Joakim Vu -
+        (foto og video av Jostein Gjertsen)
+      </footer>
+    </div>
     <!-- Script for chart -->
     <script>
-      $(document).ready(function() {
-
+      $(document).ready(function () {
         //Setup chart
-        var chartbox = document.getElementById('piechart');
-        var ctx = chartbox.getContext('2d');
+        var chartbox = document.getElementById("piechart");
+        var ctx = chartbox.getContext("2d");
         var piechart = new Chart(ctx, {
-          type: 'pie',
+          type: "pie",
           data: {
-            datasets: [{
-              label: "Motorfest 2022",
-              data: [25, 21, 4, 3, 5],
-              backgroundColor: ['rgb(255, 204, 0)', 'rgb(178, 34, 52)', 'rgb(238, 230, 217)', 'rgb(1, 33, 105)', 'rgb(0, 140, 69)'],
-            }],
-            labels: ["TYSKE", "AMERIKANSKE", "JAPANSKE", "BRITISKE", "ITALIENSKE",]
+            datasets: [
+              {
+                label: "Motorfest 2022",
+                data: [25, 21, 4, 3, 5],
+                backgroundColor: [
+                  "rgb(255, 204, 0)",
+                  "rgb(178, 34, 52)",
+                  "rgb(238, 230, 217)",
+                  "rgb(1, 33, 105)",
+                  "rgb(0, 140, 69)",
+                ],
+              },
+            ],
+            labels: [
+              "TYSKE",
+              "AMERIKANSKE",
+              "JAPANSKE",
+              "BRITISKE",
+              "ITALIENSKE",
+            ],
           },
           options: {
-            responsive: true
-          }
+            responsive: true,
+          },
         });
 
         //When chart is drawn, connect modalboxes to each event
-        chartbox.onclick = function(evt) {
+        chartbox.onclick = function (evt) {
           var activepoints = piechart.getElementsAtEvent(evt);
 
-          if(activepoints[0]) {
-            var point_id = activepoints[0]['_index'];
+          if (activepoints[0]) {
+            var point_id = activepoints[0]["_index"];
             console.log("ID clicked: " + point_id);
-            $("#modal-"+point_id).modalBox();
+            $("#modal-" + point_id).modalBox();
           }
-        }
-
+        };
       });
-      
     </script>
     <!-- Script for Image gallery -->
     <script>
       let slideIndex = 1;
       showSlides(slideIndex);
       function plusSlides(n) {
-        showSlides(slideIndex += n);
+        showSlides((slideIndex += n));
       }
       function currentSlide(n) {
-        showSlides(slideIndex = n);
+        showSlides((slideIndex = n));
       }
       function showSlides(n) {
-        let i;  
+        let i;
         let slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+        if (n > slides.length) {
+          slideIndex = 1;
         }
-        slides[slideIndex-1].style.display = "block";  
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
       }
 
       let slideIndex2 = 1;
       showSlides2(slideIndex2);
       function plusSlides2(n) {
-        showSlides2(slideIndex2 += n);
+        showSlides2((slideIndex2 += n));
       }
       function currentSlide2(n) {
-        showSlides2(slideIndex2 = n);
+        showSlides2((slideIndex2 = n));
       }
       function showSlides2(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides2");
-        if (n > slides.length) {slideIndex2 = 1}    
-        if (n < 1) {slideIndex2 = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+        if (n > slides.length) {
+          slideIndex2 = 1;
         }
-        slides[slideIndex2-1].style.display = "block";  
+        if (n < 1) {
+          slideIndex2 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex2 - 1].style.display = "block";
       }
 
       let slideIndex3 = 1;
       showSlides3(slideIndex3);
       function plusSlides3(n) {
-        showSlides3(slideIndex3 += n);
+        showSlides3((slideIndex3 += n));
       }
       function currentSlide3(n) {
-        showSlides3(slideIndex3 = n);
+        showSlides3((slideIndex3 = n));
       }
       function showSlides3(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides3");
-        if (n > slides.length) {slideIndex3 = 1}    
-        if (n < 1) {slideIndex3 = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+        if (n > slides.length) {
+          slideIndex3 = 1;
         }
-        slides[slideIndex3-1].style.display = "block";  
+        if (n < 1) {
+          slideIndex3 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex3 - 1].style.display = "block";
       }
 
       let slideIndex4 = 1;
       showSlides4(slideIndex4);
       function plusSlides4(n) {
-        showSlides4(slideIndex4 += n);
+        showSlides4((slideIndex4 += n));
       }
       function currentSlide4(n) {
-        showSlides4(slideIndex4 = n);
+        showSlides4((slideIndex4 = n));
       }
       function showSlides4(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides4");
-        if (n > slides.length) {slideIndex4 = 1}    
-        if (n < 1) {slideIndex4 = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+        if (n > slides.length) {
+          slideIndex4 = 1;
         }
-        slides[slideIndex4-1].style.display = "block";  
+        if (n < 1) {
+          slideIndex4 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex4 - 1].style.display = "block";
       }
 
       let slideIndex5 = 1;
       showSlides5(slideIndex5);
       function plusSlides5(n) {
-        showSlides5(slideIndex5 += n);
+        showSlides5((slideIndex5 += n));
       }
       function currentSlide5(n) {
-        showSlides5(slideIndex5 = n);
+        showSlides5((slideIndex5 = n));
       }
       function showSlides5(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides5");
-        if (n > slides.length) {slideIndex5 = 1}    
-        if (n < 1) {slideIndex4 = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+        if (n > slides.length) {
+          slideIndex5 = 1;
         }
-        slides[slideIndex5-1].style.display = "block";  
+        if (n < 1) {
+          slideIndex4 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex5 - 1].style.display = "block";
       }
-
- 
-      </script>
-
+    </script>
+    <!-- Script for loading -->
+    <script>
+      function move() {
+        const loadingbar = document.getElementById("myBar");
+        const content = document.getElementById("content");
+        const loadingModal = document.getElementById("loadingBar");
+        let width = 0;
+        let id = setInterval(frame, 50);
+        function frame() {
+          if (width > 95) {
+            loadingModal.classList.toggle("opacity");
+            loadingModal.style.opacity = 0;
+          }
+          if (width >= 100) {
+            content.style.display = "block";
+            loadingModal.style.display = "none";
+            clearInterval(id);
+          } else {
+            content.style.display = "none";
+            loadingModal.style.display = "flex";
+            width++;
+            loadingbar.style.width = width + "%";
+            loadingbar.innerHTML = width * 1 + "%";
+          }
+        }
+      }
+      move();
+    </script>
     <script src="/article-template/index.js"></script>
   </body>
 </html>

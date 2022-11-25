@@ -7,309 +7,362 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="loader.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <script src="src/index.js" defer></script>
   </head>
 
   <body>
-    <!-- <div class="linear"></div> -->
-
-    <main>
-      <aside class="yearcount-hide">
-        <ul>
-          <!-- <li>
+    <!-- loading -->
+    <div id="loadingBar" class="center">
+      <article class="article-loading-modal">
+        <section class="content">
+          <img src="./src/img/3.jpg" alt="" />
+          <h1>Kjempet for å beholde foreningen</h1>
+          <p>Vennligst vent. Artikkelen er klar til å leses hvert øyeblikk!</p>
+          <!-- <div class="loading-bar"></div> -->
+          <div class="w3-light-grey">
+            <div
+              id="myBar"
+              class="w3-container w3-green w3-center"
+              style="width: 20%"
+            >
+              0%
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+    <!-- content -->
+    <div id="content">
+      <main>
+        <aside class="yearcount-hide">
+          <ul>
+            <!-- <li>
             <a class="indicator" href="#"></a>
           </li>
           <li>
             <a class="indicator" href="#"></a>
           </li> -->
-          <li>
-            <a class="indicator active" href="#second">2009</a>
-          </li>
-          <li>
-            <a class="indicator" href="#third">2013</a>
-          </li>
-          <li>
-            <a class="indicator" href="#fourth">2015</a>
-          </li>
-          <li>
-            <a class="indicator" href="#fifth">2016</a>
-          </li>
-          <li>
-            <a class="indicator" href="#sixth">2018</a>
-          </li>
-          <li>
-            <a class="indicator" href="#seventh">2020</a>
-          </li>
-          <li>
-            <a class="indicator" href="#eight">2022</a>
-          </li>
-        </ul>
-      </aside>
-      <div class="content-wrapper">
-        <section id="hide" class="video-parallax">
-          <video autoplay muted loop class="myVideo">
-            <source src="/story4/src/img/vid0.mp4" type="video/mp4" />
-          </video>
-          <h1 class="first-text-parallax">
-            I dette bygget kjempes det med bruk av over 4000 år gamle teknikker.
-          </h1>
-        </section>
+            <li>
+              <a class="indicator active" href="#second">2009</a>
+            </li>
+            <li>
+              <a class="indicator" href="#third">2013</a>
+            </li>
+            <li>
+              <a class="indicator" href="#fourth">2015</a>
+            </li>
+            <li>
+              <a class="indicator" href="#fifth">2016</a>
+            </li>
+            <li>
+              <a class="indicator" href="#sixth">2018</a>
+            </li>
+            <li>
+              <a class="indicator" href="#seventh">2020</a>
+            </li>
+            <li>
+              <a class="indicator" href="#eight">2022</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="content-wrapper">
+          <section id="hide" class="video-parallax">
+            <video autoplay muted loop class="myVideo">
+              <source src="/story4/src/img/vid0.mp4" type="video/mp4" />
+            </video>
+            <h1 class="first-text-parallax">
+              I dette bygget kjempes det med bruk av over 4000 år gamle
+              teknikker.
+            </h1>
+          </section>
 
-        <section
-          id="hide"
-          class="img-parallax img1 year-content2 hide1 year-content"
-        >
-          <div class="textbox">
-            <p>
-              Det er ingen vinduer i rommet, gulvet er dekket i dempematter fra
-              hjørne til hjørne.<br />
-              De er ikledd hvit gi og stiller seg opp for å starte dagens
-              trening i Gracie Jiu Jitsu.
-            </p>
-            <p>
-              Gracie Jiu Jitsu er også kjent som BJJ - Brasiliansk Jiu-Jitsu,
-              som er basert på kodokan judo, <br />som i 1914 ble kalt «Kano
-              Jiu-Jitsu» etter grunnleggeren Jigoro Kano.<br /><br />
-              Kodokan Judo ble bragt til Brasil i 1914 av den japanske
-              judoutøveren Mitsuyo Maeda,<br />
-              og videreutviklet av Gastão Gracie og hans etterkommere Hélio
-              Gracie og Carlos Gracie.
-            </p>
-          </div>
-        </section>
-        <section id="second" class="img-parallax img2 year-content">
-          <div class="textbox">
-            <p>
-              Daniel Tryggvason har trent BJJ siden 2008.
-              <strong>Han og storebroren</strong> flyttet til Østfold fra Island
-              i 2009 på grunn av finanskrisen.
-            </p>
-            <p class="quoteText">
-              - Alt var dobbelt så dyrt på Island. Rentene på lån ble bare
-              høyere, det ble ikke lett å ha en god levestandard.
-            </p>
-          </div>
-        </section>
-        <section id="third" class="img-parallax img3 year-content">
-          <div class="textbox">
-            <p>
-              Da de startet opp i 2013 het klubben
-              <strong>Gracie Jiu Jitsu Halden - Team Pedro Sauer.</strong> Dette
-              ble da en ren Brasiliansk Jiu Jitsu klubb som befant seg på
-              Høstbakken i Tistedal.
-            </p>
-            <p class="quoteText">
-              - Min bror og jeg startet denne klubben da vi ikke fant noe
-              Brasiliansk Jiu Jitsu av den kvaliteten vi ønsket i Østfold på den
-              tiden. Det er broren min som sto for alt det økonomiske og
-              administrative.
-            </p>
-          </div>
-        </section>
-        <section id="fourth" class="img-parallax img4 year-content">
-          <div class="textbox">
-            <p class="quoteText">
-              - Vi leide en liten del av lokalet til HEAT Halden da de holdt til
-              i den gamle bowlinghallen. I samme bygning leide også Halden
-              bokseklubb lokaler, som vi etterhvert slo oss sammen med og tok
-              over boksingen for.
-            </p>
-            <p>
-              Daniel fortsetter med å fortelle at de senere måtte ut av lokalene
-              da eierne skulle bygge ut videre på lokalene de leide i.
-            </p>
-          </div>
-        </section>
-        <section id="fifth" class="img-parallax year-content">
-          <!-- <section class="video-parallax"> -->
-          <video autoplay muted loop class="myVideo2">
-            <source src="/story4/src/img/vid1.mp4" type="video/mp4" />
-          </video>
-          <!-- </section> -->
-          <div class="textbox">
-            <p>
-              <strong>Da de omsider måtte flytte</strong> fant de et passende
-              lokale i det gamle Spenst-bygget. I forbindelse med flyttingen
-              skiftet de navnet sitt til Halden Combat Academy, et mer passende
-              navn da de nå drev med både boksing,
-              <span class="tooltip">
-                BJJ
-                <span class="tooltiptext"
-                  >Gracie Jiu Jitsu er også kjent som BJJ - Brasiliansk
-                  Jiu-Jitsu, som er basert på kodokan judo, som i 1914 ble kalt
-                  «Kano Jiu-Jitsu» etter grunnleggeren Jigoro Kano.
-                  <br />
-                  <br />
-                  Kodokan Judo ble bragt til Brasil i 1914 av den japanske
-                  judoutøveren Mitsuyo Maeda, og videreutviklet av Gastão Gracie
-                  og hans etterkommere Hélio Gracie og Carlos Gracie.
+          <section
+            id="hide"
+            class="img-parallax img1 year-content2 hide1 year-content"
+          >
+            <div class="textbox">
+              <p>
+                Det er ingen vinduer i rommet, gulvet er dekket i dempematter
+                fra hjørne til hjørne.<br />
+                De er ikledd hvit gi og stiller seg opp for å starte dagens
+                trening i Gracie Jiu Jitsu.
+              </p>
+              <p>
+                Gracie Jiu Jitsu er også kjent som BJJ - Brasiliansk Jiu-Jitsu,
+                som er basert på kodokan judo, <br />som i 1914 ble kalt «Kano
+                Jiu-Jitsu» etter grunnleggeren Jigoro Kano.<br /><br />
+                Kodokan Judo ble bragt til Brasil i 1914 av den japanske
+                judoutøveren Mitsuyo Maeda,<br />
+                og videreutviklet av Gastão Gracie og hans etterkommere Hélio
+                Gracie og Carlos Gracie.
+              </p>
+            </div>
+          </section>
+          <section id="second" class="img-parallax img2 year-content">
+            <div class="textbox">
+              <p>
+                Daniel Tryggvason har trent BJJ siden 2008.
+                <strong>Han og storebroren</strong> flyttet til Østfold fra
+                Island i 2009 på grunn av finanskrisen.
+              </p>
+              <p class="quoteText">
+                - Alt var dobbelt så dyrt på Island. Rentene på lån ble bare
+                høyere, det ble ikke lett å ha en god levestandard.
+              </p>
+            </div>
+          </section>
+          <section id="third" class="img-parallax img3 year-content">
+            <div class="textbox">
+              <p>
+                Da de startet opp i 2013 het klubben
+                <strong>Gracie Jiu Jitsu Halden - Team Pedro Sauer.</strong>
+                Dette ble da en ren Brasiliansk Jiu Jitsu klubb som befant seg
+                på Høstbakken i Tistedal.
+              </p>
+              <p class="quoteText">
+                - Min bror og jeg startet denne klubben da vi ikke fant noe
+                Brasiliansk Jiu Jitsu av den kvaliteten vi ønsket i Østfold på
+                den tiden. Det er broren min som sto for alt det økonomiske og
+                administrative.
+              </p>
+            </div>
+          </section>
+          <section id="fourth" class="img-parallax img4 year-content">
+            <div class="textbox">
+              <p class="quoteText">
+                - Vi leide en liten del av lokalet til HEAT Halden da de holdt
+                til i den gamle bowlinghallen. I samme bygning leide også Halden
+                bokseklubb lokaler, som vi etterhvert slo oss sammen med og tok
+                over boksingen for.
+              </p>
+              <p>
+                Daniel fortsetter med å fortelle at de senere måtte ut av
+                lokalene da eierne skulle bygge ut videre på lokalene de leide
+                i.
+              </p>
+            </div>
+          </section>
+          <section id="fifth" class="img-parallax year-content">
+            <!-- <section class="video-parallax"> -->
+            <video autoplay muted loop class="myVideo2">
+              <source src="/story4/src/img/vid1.mp4" type="video/mp4" />
+            </video>
+            <!-- </section> -->
+            <div class="textbox">
+              <p>
+                <strong>Da de omsider måtte flytte</strong> fant de et passende
+                lokale i det gamle Spenst-bygget. I forbindelse med flyttingen
+                skiftet de navnet sitt til Halden Combat Academy, et mer
+                passende navn da de nå drev med både boksing,
+                <span class="tooltip">
+                  BJJ
+                  <span class="tooltiptext"
+                    >Gracie Jiu Jitsu er også kjent som BJJ - Brasiliansk
+                    Jiu-Jitsu, som er basert på kodokan judo, som i 1914 ble
+                    kalt «Kano Jiu-Jitsu» etter grunnleggeren Jigoro Kano.
+                    <br />
+                    <br />
+                    Kodokan Judo ble bragt til Brasil i 1914 av den japanske
+                    judoutøveren Mitsuyo Maeda, og videreutviklet av Gastão
+                    Gracie og hans etterkommere Hélio Gracie og Carlos Gracie.
+                  </span>
                 </span>
-              </span>
-              og
-              <span class="tooltip"
-                >MMA.
-                <span class="tooltiptext"
-                  >MMA er en forkortelse for Mixed Martial Arts. Dette er en
-                  fullkontakt-kampsport som tillater bruk av både slag- og
-                  grapplingteknikker, stående og på bakken, fra en rekke andre
-                  kampsporter.
-                  <br />
-                  <br />
-                  Røttene til moderne MMA kan spores tilbake til antikkens
-                  olympiske leker og pankration, en av de tidligste dokumenterte
-                  fullkontakts kampsportene.</span
-                >
-              </span>
-            </p>
-            <p>
-              Daniel forteller om nye utfordringer som dukket opp gjennom
-              klubbens reise.
-            </p>
-            <p class="quoteText">
-              - Den største nedturen min var da jeg gikk ut med skade. Det var
-              en kamp i svart belte hvor jeg røk nesten alt som kunne rykes i
-              kneet mitt. Det var 2 år jeg måtte tre av litt og la kneet bedre
-              seg, som desverre førte til at klubben slet litt i en periode.
-            </p>
-          </div>
-        </section>
-        <section id="sixth" class="img-parallax img6 year-content">
-          <div class="textbox">
-            <p>
-              <strong>I 2018 var de omtrent 22</strong> medlemmer som trente BJJ
-              i klubben.
-            </p>
-            <p>
-              Etter et par år i de nye lokalene måtte de omsider flytte igjen,
-              forteller Daniel.
-            </p>
-            <p class="quoteText">
-              - Det gamle Spenst-bygget vi holdt til i skulle bli til helt nye
-              leiligheter, så vi måtte ut derifra også.
-            </p>
-            <p>
-              De kom i dialog med HEAT Halden, som allerede hadde tilbud om
-              Taekwondo og Kickboxing. De snakket om at de skulle slå seg sammen
-              til å bli én klubb.
-            </p>
-            <p class="quoteText">
-              - Dersom vi skulle bli en del av HEAT Halden måtte vi i
-              utgangspunktet bytte navn igjen, men bestemte oss for å kombinere
-              navnene da vi har bygget opp et bra rykte innen
-              <span class="tooltip">
-                BJJ
-                <span class="tooltiptext"
-                  >Gracie Jiu Jitsu er også kjent som BJJ - Brasiliansk
-                  Jiu-Jitsu, som er basert på kodokan judo, som i 1914 ble kalt
-                  «Kano Jiu-Jitsu» etter grunnleggeren Jigoro Kano.
-                  <br />
-                  <br />
-                  Kodokan Judo ble bragt til Brasil i 1914 av den japanske
-                  judoutøveren Mitsuyo Maeda, og videreutviklet av Gastão Gracie
-                  og hans etterkommere Hélio Gracie og Carlos Gracie.
+                og
+                <span class="tooltip"
+                  >MMA.
+                  <span class="tooltiptext"
+                    >MMA er en forkortelse for Mixed Martial Arts. Dette er en
+                    fullkontakt-kampsport som tillater bruk av både slag- og
+                    grapplingteknikker, stående og på bakken, fra en rekke andre
+                    kampsporter.
+                    <br />
+                    <br />
+                    Røttene til moderne MMA kan spores tilbake til antikkens
+                    olympiske leker og pankration, en av de tidligste
+                    dokumenterte fullkontakts kampsportene.</span
+                  >
                 </span>
-              </span>
-              og
-              <span class="tooltip"
-                >MMA
-                <span class="tooltiptext"
-                  >MMA er en forkortelse for Mixed Martial Arts. Dette er en
-                  fullkontakt-kampsport som tillater bruk av både slag- og
-                  grapplingteknikker, stående og på bakken, fra en rekke andre
-                  kampsporter.
-                  <br />
-                  <br />
-                  Røttene til moderne MMA kan spores tilbake til antikkens
-                  olympiske leker og pankration, en av de tidligste dokumenterte
-                  fullkontakts kampsportene.</span
-                >
-              </span>
-              med vårt navn.
-            </p>
-          </div>
-        </section>
-        <section id="seventh" class="img-parallax img7 year-content">
-          <div class="textbox">
-            <p>
-              <strong>De ble igjen testet med nye utfordringer.</strong>
-              Covid-19 kom like etter de slo seg sammen med HEAT Halden.
-            </p>
-            <p class="quoteText">
-              - Det var egentlig en bra ting at det skulle bli nye leiligheter i
-              det forrige lokalet, for jeg tror ikke vi hadde klart å holde liv
-              i klubben vår på egenhånd.
-            </p>
-            <p>
-              Daniel forteller videre at klubben ble veldig påvirket av covid,
-              spesielt for Jiu-Jitsuen da det ikke var lov med nærkontakt. Å
-              holde 2 meters avstand til hverandre gjorde det vanskelig å holde
-              åpent.
-            </p>
-          </div>
-        </section>
-        <section id="eight" class="img-parallax img8 year-content">
-          <div class="textbox">
-            <p>
-              <strong>I disse dager er de rundt 40 medlemmer</strong> som kun
-              trener Brasiliansk Jiu Jitsu i klubben.
-            </p>
-            <p class="quoteText">
-              - Noen av målene våres fremover er å skape et eget damepart og et
-              barneparti for trening i BJJ.
-            </p>
-          </div>
-        </section>
-        <section id="eight" class="img-parallax img9 year-content">
-          <div class="textbox">
-            <p class="quoteText">
-              - Vi deltar i konkurranser 2–3 ganger i året. Det er ingen press
-              fra klubben om å delta, men vi stiller med god støtte og hjelp til
-              de som ønsker å delta.
-            </p>
-            <p>
-              Klubben var nylig på BJJ-CUP i Sande, hvor de konkurrerte mot
-              klubber fra hele landet. Dette er det største stevnet innenfor BJJ
-              i hele Norge. Innsatsen fra medlemmene resulterte i at de tok med
-              seg hjem fire gull, to sølv og to bronse mellom de 10 utøverne som
-              deltok.
-            </p>
-          </div>
-        </section>
-        <section id="eight" class="img-parallax img10 year-content">
-          <div class="textbox">
-            <p class="quoteText">
-              <strong> - Brasiliansk Jiu Jitsu</strong> er i hovedsak kun
-              konkurranse-aspektet, så det er det de fokuserer på under
-              treningene. Gracie Jiu Jitsu som vi underviser i, legger mye mer
-              vekt på selvforsvar. Så det er ekstra gøy når vi gjør det bra i
-              konkurranser, da det ikke er fokuset vårt når vi trener.
-            </p>
-          </div>
-        </section>
-        <section id="eight" class="img-parallax img11 year-content">
-          <div class="textbox">
-            <p>
-              <strong> Daniel forteller at alle medlemmene</strong> bidrar til å
-              gjøre klubben til et fantastisk sted å trene, og å møte mennesker
-              via. Han sier også at Elnæs familen gjør en fantastisk jobb for
-              klubben.
-            </p>
-            <p class="quoteText">
-              - Meg selv, Markus Dahl Olsen og Rasmus Elnæs er trenere. Vi tar
-              ikke betalt for undervisningen. Jeg personlig gjør det fordi jeg
-              elsker sporten.
-            </p>
-          </div>
-        </section>
-        <section id="eight" class="img-parallax img12 year-content">
-          <div class="textbox">
-            <p className="madeby">
-              <strong> Laget av: </strong> Stig Ark, Jostein Gjertsen og Joakim
-              Vu - Foto av Stig Ark og video av Jostein Gjertsen.
-            </p>
-          </div>
-        </section>
-      </div>
-    </main>
+              </p>
+              <p>
+                Daniel forteller om nye utfordringer som dukket opp gjennom
+                klubbens reise.
+              </p>
+              <p class="quoteText">
+                - Den største nedturen min var da jeg gikk ut med skade. Det var
+                en kamp i svart belte hvor jeg røk nesten alt som kunne rykes i
+                kneet mitt. Det var 2 år jeg måtte tre av litt og la kneet bedre
+                seg, som desverre førte til at klubben slet litt i en periode.
+              </p>
+            </div>
+          </section>
+          <section id="sixth" class="img-parallax img6 year-content">
+            <div class="textbox">
+              <p>
+                <strong>I 2018 var de omtrent 22</strong> medlemmer som trente
+                BJJ i klubben.
+              </p>
+              <p>
+                Etter et par år i de nye lokalene måtte de omsider flytte igjen,
+                forteller Daniel.
+              </p>
+              <p class="quoteText">
+                - Det gamle Spenst-bygget vi holdt til i skulle bli til helt nye
+                leiligheter, så vi måtte ut derifra også.
+              </p>
+              <p>
+                De kom i dialog med HEAT Halden, som allerede hadde tilbud om
+                Taekwondo og Kickboxing. De snakket om at de skulle slå seg
+                sammen til å bli én klubb.
+              </p>
+              <p class="quoteText">
+                - Dersom vi skulle bli en del av HEAT Halden måtte vi i
+                utgangspunktet bytte navn igjen, men bestemte oss for å
+                kombinere navnene da vi har bygget opp et bra rykte innen
+                <span class="tooltip">
+                  BJJ
+                  <span class="tooltiptext"
+                    >Gracie Jiu Jitsu er også kjent som BJJ - Brasiliansk
+                    Jiu-Jitsu, som er basert på kodokan judo, som i 1914 ble
+                    kalt «Kano Jiu-Jitsu» etter grunnleggeren Jigoro Kano.
+                    <br />
+                    <br />
+                    Kodokan Judo ble bragt til Brasil i 1914 av den japanske
+                    judoutøveren Mitsuyo Maeda, og videreutviklet av Gastão
+                    Gracie og hans etterkommere Hélio Gracie og Carlos Gracie.
+                  </span>
+                </span>
+                og
+                <span class="tooltip"
+                  >MMA
+                  <span class="tooltiptext"
+                    >MMA er en forkortelse for Mixed Martial Arts. Dette er en
+                    fullkontakt-kampsport som tillater bruk av både slag- og
+                    grapplingteknikker, stående og på bakken, fra en rekke andre
+                    kampsporter.
+                    <br />
+                    <br />
+                    Røttene til moderne MMA kan spores tilbake til antikkens
+                    olympiske leker og pankration, en av de tidligste
+                    dokumenterte fullkontakts kampsportene.</span
+                  >
+                </span>
+                med vårt navn.
+              </p>
+            </div>
+          </section>
+          <section id="seventh" class="img-parallax img7 year-content">
+            <div class="textbox">
+              <p>
+                <strong>De ble igjen testet med nye utfordringer.</strong>
+                Covid-19 kom like etter de slo seg sammen med HEAT Halden.
+              </p>
+              <p class="quoteText">
+                - Det var egentlig en bra ting at det skulle bli nye leiligheter
+                i det forrige lokalet, for jeg tror ikke vi hadde klart å holde
+                liv i klubben vår på egenhånd.
+              </p>
+              <p>
+                Daniel forteller videre at klubben ble veldig påvirket av covid,
+                spesielt for Jiu-Jitsuen da det ikke var lov med nærkontakt. Å
+                holde 2 meters avstand til hverandre gjorde det vanskelig å
+                holde åpent.
+              </p>
+            </div>
+          </section>
+          <section id="eight" class="img-parallax img8 year-content">
+            <div class="textbox">
+              <p>
+                <strong>I disse dager er de rundt 40 medlemmer</strong> som kun
+                trener Brasiliansk Jiu Jitsu i klubben.
+              </p>
+              <p class="quoteText">
+                - Noen av målene våres fremover er å skape et eget damepart og
+                et barneparti for trening i BJJ.
+              </p>
+            </div>
+          </section>
+          <section id="eight" class="img-parallax img9 year-content">
+            <div class="textbox">
+              <p class="quoteText">
+                - Vi deltar i konkurranser 2–3 ganger i året. Det er ingen press
+                fra klubben om å delta, men vi stiller med god støtte og hjelp
+                til de som ønsker å delta.
+              </p>
+              <p>
+                Klubben var nylig på BJJ-CUP i Sande, hvor de konkurrerte mot
+                klubber fra hele landet. Dette er det største stevnet innenfor
+                BJJ i hele Norge. Innsatsen fra medlemmene resulterte i at de
+                tok med seg hjem fire gull, to sølv og to bronse mellom de 10
+                utøverne som deltok.
+              </p>
+            </div>
+          </section>
+          <section id="eight" class="img-parallax img10 year-content">
+            <div class="textbox">
+              <p class="quoteText">
+                <strong> - Brasiliansk Jiu Jitsu</strong> er i hovedsak kun
+                konkurranse-aspektet, så det er det de fokuserer på under
+                treningene. Gracie Jiu Jitsu som vi underviser i, legger mye mer
+                vekt på selvforsvar. Så det er ekstra gøy når vi gjør det bra i
+                konkurranser, da det ikke er fokuset vårt når vi trener.
+              </p>
+            </div>
+          </section>
+          <section id="eight" class="img-parallax img11 year-content">
+            <div class="textbox">
+              <p>
+                <strong> Daniel forteller at alle medlemmene</strong> bidrar til
+                å gjøre klubben til et fantastisk sted å trene, og å møte
+                mennesker via. Han sier også at Elnæs familen gjør en fantastisk
+                jobb for klubben.
+              </p>
+              <p class="quoteText">
+                - Meg selv, Markus Dahl Olsen og Rasmus Elnæs er trenere. Vi tar
+                ikke betalt for undervisningen. Jeg personlig gjør det fordi jeg
+                elsker sporten.
+              </p>
+            </div>
+          </section>
+          <section id="eight" class="img-parallax img12 year-content">
+            <div class="textbox">
+              <p className="madeby">
+                <strong> Laget av: </strong> Stig Ark, Jostein Gjertsen og
+                Joakim Vu - Foto av Stig Ark og video av Jostein Gjertsen.
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!-- Script for loading -->
+    <script>
+      function move() {
+        const loadingbar = document.getElementById("myBar");
+        const content = document.getElementById("content");
+        const loadingModal = document.getElementById("loadingBar");
+        let width = 0;
+        let id = setInterval(frame, 50);
+        function frame() {
+          if (width > 95) {
+            loadingModal.classList.toggle("opacity");
+            loadingModal.style.opacity = 0;
+          }
+          if (width >= 100) {
+            content.style.display = "block";
+            loadingModal.style.display = "none";
+            clearInterval(id);
+          } else {
+            content.style.display = "none";
+            loadingModal.style.display = "flex";
+            width++;
+            loadingbar.style.width = width + "%";
+            loadingbar.innerHTML = width * 1 + "%";
+          }
+        }
+      }
+      move();
+    </script>
   </body>
 </html>
