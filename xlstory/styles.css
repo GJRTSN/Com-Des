@@ -180,11 +180,12 @@ h1 {
   background-color: black;
   border-radius: 50%;
   padding: 10px;
+  margin-bottom: 50px;
 }
 .text-parallax2 {
   background: rgba(0, 0, 0, 0);
   color: #fff;
-  text-align: center;
+  text-align: left;
   height: 90vh;
   display: flex;
   align-items: flex-end;
@@ -193,7 +194,7 @@ h1 {
 
 .img-parallax h1 {
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   text-shadow: 2px 2px #000000;
   font-family: "Cabin", Sans-Serif;
   max-width: 60rem;
