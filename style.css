@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  transition: all 0.2s;
 }
 
 body {
@@ -11,22 +12,85 @@ body {
   font-family: "Roboto Slab", serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+.story1 {
+  background-image: url("/img/molnes.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.story1:hover {
+  opacity: 0.8;
+}
+.story2:hover {
+  opacity: 0.8;
+}
+.story3:hover {
+  opacity: 0.8;
+}
+.story4:hover {
+  opacity: 0.8;
+}
+
+h2:hover {
+  background-color: gray;
+  transition: all 0.2s;
+}
+.story2 {
+  background-image: url("/img/mf.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.story3 {
+  background-image: url("/img/sopp.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.story4 {
+  background-image: url("/img/3.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.flexdiv {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  align-content: center;
+}
+
+h2 {
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
 main {
   margin: 0 auto;
   background-color: lightgray;
-  width: 60%;
+  width: 100%;
   height: 100%;
 }
 
 main h1 {
   font-size: 20px;
   padding-top: 10px;
-  padding-left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 50px;
+  font-family: "Roboto Slab", serif;
 }
 
 #articlecontainer {
-  background-color: aliceblue;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
@@ -35,8 +99,7 @@ main h1 {
 
 article {
   width: 100%;
-  height: auto;
-  padding: 50px;
+  height: 400px;
 }
 
 article h2 a {
@@ -47,11 +110,6 @@ article h2 a {
 
 article h2 {
   margin-top: 5px;
-}
-
-#articleimg {
-  width: 100%;
-  border-radius: 5px;
 }
 
 nav {
@@ -67,7 +125,8 @@ nav ul {
 header {
   margin: 0 auto;
   margin-top: 20px;
-  width: 60%;
+  width: 100%;
+  padding: 20px 50px;
 }
 
 #logo {
@@ -78,6 +137,9 @@ header {
   main {
     width: 100%;
     height: 50px;
+  }
+  article {
+    height: 400px;
   }
 
   #articlecontainer {
