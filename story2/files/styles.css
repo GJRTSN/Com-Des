@@ -464,6 +464,14 @@ footer {
   font-family: "Open Sans", sans-serif;
 }
 
+@media only screen and (min-width: 500px) {
+  div#chart {
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+  }
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev,
@@ -473,19 +481,24 @@ footer {
   }
 }
 
-/* MEDIA QUERIES MOBILE FIRST */
+/* MEDIA QUERIES MOBILE FIRST
 @media only screen and (max-width: 600px) {
   .infographic-info-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .content-box {
     /* padding: 20px; */
-  }
-}
+
+/* } */
 
 @media only screen and (max-width: 900px) {
   .infographic-info-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .infographic-info {
+    margin: 0 auto;
   }
   body {
     margin: 0;
@@ -495,6 +508,14 @@ footer {
 
   footer {
     font-size: 15px;
+  }
+
+  #piechart {
+    max-width: 100%;
+  }
+
+  .piechart-title {
+    margin-bottom: 20px;
   }
 
   .myVideo {
@@ -515,12 +536,14 @@ footer {
     width: 100%;
   }
 
-  img {
-    width: 100%;
+  .imagediv {
+    max-width: 100%;
   }
 
   .content-box {
     width: 100%;
+    display: block;
+
     padding: 5%;
     justify-content: baseline;
   }
