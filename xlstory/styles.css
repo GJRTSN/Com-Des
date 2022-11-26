@@ -14,7 +14,24 @@ body {
 h1 {
   /* max-width: 50rem; */
 }
+.logoLink {
+  align-self: flex-start;
+  position: absolute;
+  top: -20px;
+  width: 150px;
+  margin-left: 20px;
+  background-color: white;
+  padding: 10px 15px;
+}
 
+.logo {
+  width: 100%;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+  transition: all 0.2s;
+}
 /* Valeria Images */
 .img1 {
   background-image: url("img/valEye.png");
