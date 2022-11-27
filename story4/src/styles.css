@@ -115,7 +115,7 @@ aside {
   position: fixed;
   top: 48%;
   transform: translate(-50%, -50%);
-  z-index: 100000;
+  z-index: 1000;
   margin-left: 50px;
 }
 
@@ -353,22 +353,19 @@ header h1 {
   visibility: visible;
   transition: all 0.2s;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .img6 {
     background-image: url("../src/img/6-m.jpg");
   }
-
+  .textbox {
+    margin-left: 20px;
+    z-index: 10000;
+  }
   .textbox p {
-    font-size: 2rem;
+    font-size: 16px;
   }
 
-  .first-text-parallax {
-    font-size: 5rem;
-    padding: 80px;
-  }
-
-  .logoLink {
-    width: 400px;
-    padding: 20px;
+  .textbox2 p {
+    font-size: 16px;
   }
 }
