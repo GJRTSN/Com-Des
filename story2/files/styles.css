@@ -13,6 +13,25 @@ body {
   scroll-behavior: smooth;
 }
 
+.logoLink {
+  align-self: flex-start;
+  position: absolute;
+  top: -5px;
+  width: 150px;
+  margin-left: 20px;
+  background-color: white;
+  padding: 10px 15px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+
 h1 {
   font-size: 2rem;
 }
