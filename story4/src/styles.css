@@ -366,4 +366,9 @@ header h1 {
     font-size: 5rem;
     padding: 80px;
   }
+
+  .logoLink {
+    width: 400px;
+    padding: 20px;
+  }
 }
