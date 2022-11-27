@@ -7,7 +7,7 @@ const onScroll = () => {
   // console.log(firstDiv.clientHeight - h1Text.clientHeight);
   const firstDiv = document.querySelector(".bkg");
   const firstText = document.getElementById("first-text");
-  const divHeight = firstDiv.clientHeight;
+  // const divHeight = firstDiv.clientHeight;
   const bodyHeight = document.body.clientHeight;
   const scrollHeight = document.documentElement.scrollTop;
   const textHeight = firstText.clientHeight;
