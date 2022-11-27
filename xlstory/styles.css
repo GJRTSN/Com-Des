@@ -14,6 +14,14 @@ body {
 h1 {
   /* max-width: 50rem; */
 }
+
+.articleEnd {
+  color: white;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+}
+
 .logoLink {
   align-self: flex-start;
   position: absolute;
