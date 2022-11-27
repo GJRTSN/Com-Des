@@ -444,6 +444,14 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.articleEnd {
+  color: white;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
 /* Caption text */
 .text {
   color: #f2f2f2;
