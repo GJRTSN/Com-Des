@@ -348,6 +348,17 @@ header h1 {
   z-index: 2;
 }
 
+.logoLink2 {
+  align-self: flex-end;
+  position: absolute;
+  top: -5px;
+  width: 150px;
+  margin-left: 20px;
+  background-color: white;
+  padding: 10px 15px;
+  z-index: 1000;
+}
+
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
