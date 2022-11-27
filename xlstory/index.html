@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kom fra Russland for å studere, får ikke reiste hjem igjen</title>
+
     <script>
       const timeStart = Date.now()
-      function ready() {
+      window.addEventListener('load', () => {
         console.log(`${Date.now() - timeStart} ms for page to load`)
-      }
-    
+      });
+   
       document.addEventListener("DOMContentLoaded", ready);
     </script>
 
@@ -451,14 +452,13 @@
         </div>
       </section>
 
-      <footer>
-        <p><strong>Laget av: </strong></p>
-        <p>
-          Stig Ark, Jostein Gjertsen og Joakim Vu - Foto: Stig Ark Video:
-          Jostein Gjertsen
-        </p>
-      </footer>
-    </div>
+      <div class="img-parallax imgEnd">
+        <h1 class="text-parallax">
+          Laget av: Stig ark, Jostein Gjersten og Joakim Vu - Foto av Stig Ark,
+          Video av Jostein Gjertsen
+        </h1>
+      </div>
+
     <!-- Script for loading -->
     <script>
       function move() {

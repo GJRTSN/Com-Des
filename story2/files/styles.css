@@ -154,7 +154,7 @@ footer {
   padding-left: 40px;
   align-items: center;
   background-color: white;
-  height: 100px;
+  height: auto;
 }
 footer strong {
   padding-right: 20px;

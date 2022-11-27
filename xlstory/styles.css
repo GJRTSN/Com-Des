@@ -34,10 +34,10 @@ h1 {
 }
 /* Valeria Images */
 .img1 {
-  background-image: url("img/valEye.png");
+  background-image: url("img/valEye.jpeg");
 }
 .img1-1 {
-  background-image: url("img/melEye.png");
+  background-image: url("img/melEye.jpeg");
 }
 .img2 {
   background-image: url("img/val-1.jpg");
@@ -49,13 +49,13 @@ h1 {
   background-image: url("img/val-2.jpg");
 }
 .img3-3 {
-  background-image: url("img/mel2.jpg");
+  background-image: url("img/mel2.jpeg");
 }
 .img4 {
   background-image: url("img/val-5.jpg");
 }
 .img4-4 {
-  background-image: url("img/mel5.jpg");
+  background-image: url("img/mel5.jpeg");
 }
 .img5 {
   background-image: url("img/val-6.jpg");
@@ -64,10 +64,14 @@ h1 {
   background-image: url("img/val-3.jpg");
 }
 .img6-6 {
-  background-image: url("img/mel3.jpg");
+  background-image: url("img/mel3.jpeg");
 }
 .img7 {
-  background-image: url("img/mel4.jpg");
+  background-image: url("img/mel4.jpeg");
+}
+
+.imgEnd {
+  background-image: url("./img/molnes.jpg");
 }
 
 .bigMap {
@@ -439,6 +443,7 @@ footer strong {
     max-width: 40rem;
     font-size: 1.5rem;
     line-height: 2rem;
+    text-shadow: none;
   }
 
   .video-parallax h1 {
@@ -450,6 +455,10 @@ footer strong {
     max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
   }
 
   .img1 {
@@ -495,6 +504,14 @@ footer strong {
   .videoMedia {
     color: black;
 
+    text-shadow: none;
+  }
+
+  .text-box-mer p {
+    font-size: 1.5rem;
+  }
+
+  .vidtext {
     text-shadow: none;
   }
 
