@@ -300,25 +300,25 @@ footer strong {
 /* MEDIA QUERIES MOBILE FIRST */
 @media only screen and (max-width: 1000px) {
   .text-box h1 {
-    max-width: 40rem;
+    max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
   .img-parallax h1 {
-    max-width: 40rem;
+    max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
   .video-parallax h1 {
-    max-width: 40rem;
+    max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
   .last-section h1 {
-    max-width: 40rem;
+    max-width: 30rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
