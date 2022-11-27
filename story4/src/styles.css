@@ -353,8 +353,17 @@ header h1 {
   visibility: visible;
   transition: all 0.2s;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .img6 {
     background-image: url("../src/img/6-m.jpg");
+  }
+
+  .textbox p {
+    font-size: 2rem;
+  }
+
+  .first-text-parallax {
+    font-size: 5rem;
+    padding: 80px;
   }
 }
